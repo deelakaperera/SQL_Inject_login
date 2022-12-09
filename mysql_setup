@@ -1,0 +1,20 @@
+# install mysql
+sudo yum install mysql
+systemctl start mariadb
+
+# mysql config 
+# edit at config.php
+bind address = 'localhost';
+username = 'root';
+password = '';
+database = 'demo123';
+
+# Create database
+CREATE DATABASE demo123;
+
+# Create table
+CREATE TABLE members ( username varchar(255), password varchar(255));
+
+# Instert initial values
+# This username & password is used to login without SQL injecting
+INSERT INTO members (username, password) VALUES (user1, password1);
